@@ -1,0 +1,27 @@
+body{
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1600px;
+   
+}
+div{
+    width: 100%;
+    max-width: 600px;
+    float: left;
+    margin: 10px 25px 15px 20px;
+    padding:25px;
+    border-top: 2px solid red;
+    border-left: 2px dotted blue;
+    border-bottom: 2px solid green;
+    border-right: 2px dotted orange;
+/* border-color: blue;
+border-style: double;
+border-width: 2px;*/
+/*border: 2px double blue;*/
+border-radius: 25px;
+background-image: url('../../curs2/images/FAV/android-chrome-512x512.png');
+background-repeat: no-repeat;
+background-position: 50% 50%;
+color: brown;
+
+}
