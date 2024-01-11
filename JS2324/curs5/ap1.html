@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArr = [5, 7, 6, 1, 2, 9, 3, 4];
+        console.log(myArr);
+        let suma = myArr.reduce(function (s, a){
+            return s + a;
+        });
+        let newArr = myArr.sort().reverse();
+        console.log(newArr);
+        console.log(suma);
+
+
+        let suma2 = 0;
+        myArr.forEach(function (a) { suma2 =suma2 + a;});
+        console.log(suma2);
+    </script>
+</body>
+</html>
