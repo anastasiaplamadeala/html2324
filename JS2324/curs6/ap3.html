@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pass_gen()">
+        Apasa aici pentru a genera o parola
+    </button>
+
+        <div>
+            <p id="password"></p>
+        </div>
+    <script>
+        var new_pass = document.getElementById("password");
+        /*Generam parola de lungime n */
+    function newPassword(n) {
+        let pass ='';
+        let str ='ABCDEFGHIJKLMNPQRSTUVWXYZ' +
+        'abcdefghijkmnpqrstuvwxyz0123456789@#!';
+        for (let i=1; i<= n; i++){
+            let char =  Math.floor(Math.random() * str.length + 1 );
+            pass+= str.charAt(char);
+
+        }
+        return pass;
+
+    }
+    function pass_gen(){
+        let lungime =+eval(prompt('Va rugam sa introduceti lungimea parolei', 12));
+        if(typeof lungime=='number' && lungime >=6 && lungime <= 30){
+            new_pass.innerHTML = newPassword(lungime);
+        }
+        else{
+            alert('Va rugam sa introduceti o valoare numerica>=6')
+        }
+    }
+
+
+    </script>
+
+
+</body>
+</html>
