@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function Student(id, nume, varsta) {
+            this.id = id;
+            this.nume = nume;
+            this.varsta = varsta;
+            this.salut = function ( ) {
+
+                console.log(`Buna ziua, numele meu este: ${this.name} si am ${this.varsta} ani.`);
+
+            }
+           this.examen = function (nota1, nota2) {
+                 this.nota1 = parseInt(nota1);
+                 this.nota2 = parseInt(nota2);
+                 console.log(`Azi am terminat toate examenele la Javascript`);
+
+            }
+
+            this.calMedia = function ()  {
+                if (this.nota1 > 1 && this.nota1 <=10 && this.nota2 > 1 &&  1 && this.nota2<=10 ) {
+                    this.media = (this.nota1 + this.nota2) /2;
+                }
+                else {
+                    console.error(`Nu sunt suficiente note`);
+                }
+            }
+
+
+
+        }
+        const student1 = new Student(1, 'Popescu Ion', 19);
+        const student2 = new Student(2, 'Ionescu Dan', 40);
+
+        console.table(student1);
+        console.table(student2);
+
+        student1.salut();
+        student2.salut();
+        student1.examen(8, 10);
+
+        student1.calMedia();
+        console.info(student1.media);
+
+
+
+
+    </script>
+</body>
+</html>
